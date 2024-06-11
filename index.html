@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- explicacion: lo primero que deben incluir dentro del documento html es el head, 
+    dentro de el agregaremos titulo, enlaces a hojas de estilo y fuentes entre otras cosas -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <!-- repaso de la estructura del head -->
+  <!-- explicacion: Luego deben agregar el body -->
+  <body class="scroll">
+    <!-- explicacion: dentro del body lo primero que deben agregar es el header y la barra de navegacion -->
+    <header class="encabezado">
+      <nav class="navegacion">
+        <a class="navegacion__enlace" href="#presentacion">
+          <h2 class="navegacion__titulo">Informatorio</h2>
+        </a>
+        <ul class="enlaces">
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#presentacion">Inicio</a>
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#sobre-mi">Sobre mi</a>
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#proyectos">Proyectos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- repaso de la estructura del header y explicacion de los enlaces -->
+
+    <!-- explicacion: A continuacion incluiremos la etiqueta main -->
+    <main class="principal">
+      <!-- explicacion: dentro de esta etiqueta agregaremos las diferentes secciones de nuestra página -->
+
+      <!-- explicacion: Comenzaremos incluyendo una vista de presentacion -->
+      <section class="presentacion" id="presentacion">
+        <div class="presentacion__contenedor_info">
+          <h1 class="presentacion__titulo">Soy Desarrollador</h1>
+          <p class="presentacion__parrafo">
+            Un poco de mi camino a cambiar mi vida profesional
+          </p>
+          <div class="presentacion__contenedor_botones">
+            <a href="#sobre-mi" class="boton" role="button">Sobre mí</a>
+            <a
+              href="./assets/Doc/cv.pdf"
+              target="_blank"
+              class="boton boton_oscuro"
+              role="button"
+              >Descargar CV</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- repaso de las partes de la seccion -->
+
+      <!-- explicacion: Ahora agregaremos una seccion donde nos explayaremos 
+        sobre nuestra historia personal, para ello escribiremos lo siguiente -->
+      <article class="articulo sobre_mi" id="sobre-mi">
+        <h2 class="articulo__titulo">Un poco sobre mi</h2>
+        <div class="articulo__contenedor_descripciones">
+          <section class="seccion_descripcion">
+            <div class="seccion_descripcion__porta_retrato">
+              <img
+                class="seccion_descripcion__imagen"
+                src="./assets/imágenes/perfil/trabajo2.jpg"
+                alt="foto trabajando en la oficina"
+                title="trabajando en la oficina"
+              />
+            </div>
+            <div
+              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
+              aria-label="descripcion personal"
+            >
+              <h3 class="seccion_descripcion__titulo" id="mi_historia_titulo">
+                Mi historia
+              </h3>
+              <p
+                class="seccion_descripcion__parrafo"
+                aria-label="Detalles de mi historia"
+                aria-describedby="mi_historia_titulo"
+              >
+                Me llamo Gabiel, soy un "chico" de 34 años, estudiando para convertirse
+                en un desarrollador, soy una persona que constantemente busca mejorar y capacitarse, trato de mejorar
+                y este es unos de mis primeros proyectos.En esta foto estoy en Chile, como misionero, estuve 2 años ahi tratando de ayudar a las personas
+                en todo lo que podía, la vista de ese lugar era increíble.
+                 Te doy la bienvenida y te agradezco por pasar por aca.
+                
+              </p>
+             
+            </div>
+          </section>
+          <!-- explicacion: seguidamente tendremos una seccion muy similar a la anterior 
+            pero cambiaremos el orden de los elementos dejando la imagen al final -->
+          <section class="seccion_descripcion">
+            <div
+              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
+              aria-label="descripcion personal"
+            >
+              <h3 class="seccion_descripcion__titulo" id="mis_hobbies_titulo">
+                Mis hobbies
+              </h3>
+              <p
+                class="seccion_descripcion__parrafo"
+                aria-label="Detalles de mis hobbies"
+                aria-describedby="mis_hobbies_titulo"
+              >
+                Me gusta mucho la música y en esta foto podes verme intentando cantar.
+                Estudié para tocar batería y guitarra y me juntaba con varios de mis amigos aficionados 
+                a tocar temas del momento. Una de mis cuentas pendientes es tocar el bajo, pienso que es un instrumento 
+                increíble y muy infravalorado, ¿no lo crees así?
+              </p>
+              
+            </div>
+            <div class="seccion_descripcion__porta_retrato">
+              <img
+                class="seccion_descripcion__imagen seccion_descripcion__imagen_variante"
+                src="./assets/imágenes/perfil/trabajo3.jpg"
+                alt="foto mientras me encontraba en una reunion de trabajo"
+                title="selfie en una reunion"
+              />
+            </div>
+          </section>
+        </div>
+      </article>
+      <!-- repaso article sobre mi y su estructura -->
+
+      <!-- explicacion: En la seccion que sigue agregaremos los proyectos en los que trabajaron,
+      no se preocupen si todavia no cuentan con ninguno, en el momento que comiencen a construirlos 
+      podran ir actualizando la informacion de esta seccion -->
+      <article class="articulo proyectos" id="proyectos">
+        <br><br><br><br><br><br><br><br>
+        <h2 class="articulo__titulo">Mis proyectos</h2>
+        <div class="contenedor_tarjetas_grid">
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/paisaje.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 1"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">viajes</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_1"
+              >
+                Viajar por el mundo es uno de mis sueños, bueno creo que el de cualquiera ¿no?, y una de
+                las ventajas de ser desarrolador es que puedes trabajar desde cualquier lugar 
+                en donde poseas una buena conección de internet. ¿comenzamos el viaje de desarrollador juntos?
+              </p>
+              <a href="#" class="boton boton_oscuro" target="_blank"
+                >Ver proyecto</a
+              >
+            </div>
+          </article>
+          <!-- explicacion: pueden agregar tantas tarjetas como deseen, para ejemplificar agregaremos seis. 
+            Podemos hacerlo simplemente copiando y pegando. Yo en mi caso en algunas tarjetas agregare un pequeño cambio a los botones  -->
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/juegos.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 2"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">programador en medicina</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_2"
+              >
+                Uno de los conocimientos mas nobles que existen según mi punto de vista es el de la medicina.
+                Y que mejor que fusionrlo con la programación y el desarrollo!!. Actualmente gozamos de avances médicos
+                gracias al desarrollo web orientado a la medicina. ¿te gustaría participar de un proyecto que impactaría
+                en la salud de las personas?
+              </p>
+              <a href="#" class="boton" target="_blank">Ver proyecto</a>
+            </div>
+          </article>
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/calendario.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 3"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_3">seguridad informática</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_3"
+              >
+                ¿Haz pensado en ser hacker pero trabajando para los buenos? Bueno, en la 
+                ciberseguridad puedes hacerlo, es un campo amplio la verdad, que va desde
+                testeo de vuelnerabilidades hasta forense en informática. Pincha aqui para saber mas.
+              </p>
+              <a href="#" class="boton boton_oscuro" target="_blank"
+                >Ver proyecto</a
+              >
+            </div>
+          </article>
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/clima.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 4"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_4">clima</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_4"
+              >
+                Lo lindo del desarrollo web es que puedes trabajar, estudiar y capaciarte en muchisimos campos,
+                uno de ellos es el clima, y puedes desarrollar programas para que puedan predecir los cambios climáticos.
+                Parece algo simple, pero no sÓlo se limita a saber cuandO va a llover.
+                Esta clase de datos es utilizada por ejemplo en la aviacíon, y dependen muchas vidas de que la 
+                información sea correcta. 
+              </p>
+              <a href="#" class="boton" target="_blank">Ver proyecto</a>
+            </div>
+          </article>
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/calculadora.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 5"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_5">calculadora</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_5"
+              >
+                La programación puede de ir de algo super complejo como la inteligenci artificial,
+                a algo tan convencional como una calculadora. De hecho es una de las primeras cosas que se puede aprender
+                a hacer en el camino del desarrollador. 
+              </p>
+              <a href="#" class="boton boton_oscuro" target="_blank"
+                >Ver proyecto</a
+              >
+            </div>
+          </article>
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/imágenes/Proyectos/reproductor.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 6"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_6">desarrollo de apps</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_6"
+              >
+                ¿Alguna vez te haz preguntado como funciona tu app favorita?
+                En la programación puedes inclinarte al campo del desarrollo de aplicaciones e incluso 
+                quien sabe, puedes trabajar junto al equipo de tu app favorita!!
+              </p>
+              <a href="#" class="boton" target="_blank">Ver proyecto</a>
+            </div>
+          </article>
+        </div>
+      </article>
+      <!-- repaso del articulo proyectos -->
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- repaso de todo lo incluido en la etiqueta main -->
+
+    <!-- Por ultimo deben agregar la etiqueta footer. 
+      En esta aparecera nuestra informacion de contacto y 
+      también inluiremos enlaces de navegacion y derechos. -->
+    <footer class="pie_de_pagina" role="contentinfo">
+      <!-- explicacion: la primer columna sera para nuestras redes,
+        cabe aclarar que la estructura sera similar en todos los casos y solo habrá pequeños cambios -->
+      <div class="pie_de_pagina__columna">
+        <h4 class="pie_de_pagina__titulo_columna">Mis redes</h4>
+        <ul class="enlaces enlaces_redes">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://github.com/RamaAlves"
+              target="_blank"
+              ><img
+                class="enlaces__icono"
+                src="./assets/imágenes/logotipos/github-logo.png"
+                alt="logo de github"
+                title="github"
+            /></a>
+          </li>
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://www.instagram.com/ramiro_alves_/"
+              target="_blank"
+            >
+              <img
+                class="enlaces__icono"
+                src="./assets/imágenes/logotipos/ig-logo.png"
+                alt="logo de instagram"
+                title="instagram"
+              />
+            </a>
+          </li>
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://twitter.com/1394Alves"
+              target="_blank"
+              ><img
+                class="enlaces__icono"
+                src="./assets/imágenes/logotipos/x-logo.png"
+                alt="logo de X"
+                title="X"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!-- explicacion: la segunda columna sera para nuestros medios de contacto  -->
+      <div class="pie_de_pagina__columna">
+        <h4 class="pie_de_pagina__titulo_columna">Contactame</h4>
+        <ul class="enlaces enlaces_vertical">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="mailto:elder1496@gmail.com"
+              target="_blank"
+              >Mail: elder1496@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- explicacion: la ultima columna sera para los enlaces de navegacion -->
+      <div class="pie_de_pagina__columna" role="navigation">
+        <h4 class="pie_de_pagina__titulo_columna">Secciones</h4>
+        <ul class="enlaces enlaces_vertical">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="#presentacion"
+              >Inicio</a
+            >
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#sobre-mi"
+              >Sobre mi</a
+            >
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#proyectos"
+              >Proyectos</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- por ultimo los derechos de la pagina -->
+      <div class="pie_de_pagina__copyright">
+        <p>©️Copyright 2024</p>
+      </div>
+    </footer>
+    <!-- repaso de los elementos en el footer -->
+  </body>
+</html>
